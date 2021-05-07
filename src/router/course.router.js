@@ -5,9 +5,9 @@ const router = express.Router();
 
 router.route('/courses')
     .get(ctrl.list)
-    .get(ctrl.create);
+    .post(ctrl.create);
 
-    router.route('courses/:id')
+    router.route('/courses/:id')
     .get(ctrl.read)
     .put(ctrl.update)
     .delete(ctrl.remove);
